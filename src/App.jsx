@@ -1,7 +1,20 @@
 import { NavBar } from "./components/navbar"
 import { MessageCard } from "./components/messageCard"
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react"
+import { getMessages } from "./redux/messageSlice"
 
 function App() {
+
+  const dispatch = useDispatch()
+  const messages = useSelector(state => state.messages)
+
+  useEffect(() =>{
+
+    dispatch(getMessages())
+    
+  }, [])
+  console.log(messages)
 
   return (
     <>
