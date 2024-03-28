@@ -7,7 +7,7 @@ import { getMessages } from "./redux/messageSlice"
 function App() {
 
   const dispatch = useDispatch()
-  const messages = useSelector(state => state.messages)
+  const messages = useSelector(state => state.messages.data)
 
   useEffect(() =>{
 
@@ -20,8 +20,22 @@ function App() {
     <>
       <NavBar/>
       <div className="container mx-auto lg:w-10/12 sm:w-11/12 mt-10">
-
-        <MessageCard/>
+        <div className="grid grid-cols-3 gap-4">
+          {
+            messages.map(message => (
+              
+              <MessageCard
+                senderNumber={message.sender_number}
+                senderName={message.sender_name}
+                receivedNumber={message.received_number}
+                platform={message.platform}
+                description={message.message_text}
+                date={message.message_date}
+                key={message.id}
+              />
+            ))
+          }
+        </div>
       </div>
     </>
   )
