@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <div className="container mx-auto lg:w-10/12 sm:w-11/12 mt-10">
+      <div className="container mx-auto lg:w-10/12 sm:w-11/12 my-10">
         <div className="grid grid-cols-3 gap-4">
           {
             messages.map(message => (
