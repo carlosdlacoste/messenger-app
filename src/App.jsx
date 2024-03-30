@@ -20,7 +20,7 @@ function App() {
     <>
       <NavBar/>
       <div className="container mx-auto lg:w-10/12 sm:w-11/12 my-10">
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-6">
           {
             messages.map(message => (
               
