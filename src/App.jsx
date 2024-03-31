@@ -14,7 +14,6 @@ function App() {
     dispatch(getMessages())
     
   }, [])
-  console.log(messages)
 
   return (
     <>
