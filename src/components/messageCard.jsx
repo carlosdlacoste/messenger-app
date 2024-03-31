@@ -10,7 +10,7 @@ export const MessageCard = (props) => {
                     <img className="w-7 h-6" src={arrow} alt="" />
                     <h3 className="text-2xl text-white break-all">{props.receivedNumber}</h3>
                 </div>
-                <div className="text-xl space-y-4 p-3 h-80">
+                <div className="text-xl text-justify space-y-4 p-3 h-80">
                     <p className="text-green-300">Sender: <span className="text-white font-extrabold uppercase">{props.senderName}</span></p>
                     <p className="text-green-300">Platform: <span className="text-white font-extrabold uppercase">{props.platform}</span></p>
                     <p className="text-green-300">Date: <span className="text-white font-extrabold uppercase">{props.date.slice(0, -10)}</span></p>
